@@ -8,13 +8,12 @@ install:
     - sudo apt-get install libqt4-dev
     - pip install PySide --no-index --find-links https://parkin.github.io/python-wheelhouse/;
     - python ~/virtualenv/python${TRAVIS_PYTHON_VERSION}/bin/pyside_postinstall.py -install
-    - pip install -r requirements.txt
-    - pip install pytest pycodestyle
+    - pip install typing pyqtgraph st prett pytest pycodestyle
 
 script:
     - pycodestyle . --max-line-length=120
-    - pwd
-    - ls
+    - cd tests
+    - python test_plot_widget.py
     
 notifications:
     email: false
