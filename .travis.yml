@@ -13,7 +13,7 @@ install:
 
 script:
     - pycodestyle . --max-line-length=120
-    - py.test -p unittest
+    - python ./tests/test_plot_widget.py
 
 notifications:
     email: false
