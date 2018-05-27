@@ -13,6 +13,8 @@ install:
 
 script:
     - pycodestyle . --max-line-length=120
-
+    - pwd
+    - ls
+    
 notifications:
     email: false
